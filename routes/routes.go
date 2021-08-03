@@ -32,6 +32,10 @@ func Start() *echo.Echo {
 	e.POST("/register", controllers.RegisterCustomersController)
 	e.POST("/login", controllers.LoginCustomersController)
 
+	//Payment Auth
+	jwtAuth.GET("/payments", controllers.GetPayments)
+	jwtAuth.PUT("/payments/:id", controllers.UpdatePayments)
+
 	//Route  CartItems
 	jwtAuth.GET("/cartitems/:id", controllers.GetCartitemsByCartId)
 	jwtAuth.POST("/cartitems", controllers.CreateCartitems)
