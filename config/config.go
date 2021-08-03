@@ -38,6 +38,8 @@ func InitDB() {
 
 func InitMigrate() {
 	DB.AutoMigrate(&models.Customers{})
+	DB.AutoMigrate(&models.Categories{})
+	DB.AutoMigrate(&models.Products{})
 	DB.AutoMigrate(&models.Carts{})
 	DB.AutoMigrate(&models.Cartitems{})
 	DB.AutoMigrate(&models.Checkout_items{})
