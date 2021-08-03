@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"altastore/lib/database"
 	"altastore/lib/utils"
 	"altastore/models"
 	"net/http"
