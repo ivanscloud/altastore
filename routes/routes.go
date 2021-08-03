@@ -18,6 +18,10 @@ func Start() *echo.Echo {
 	// update profile
 	jwtAuth.PUT("/customers/:id", controllers.UpdateProfileCustomersController)
 
+	//Order Auth
+	jwtAuth.POST("/orders", controllers.CreateOrders)
+	jwtAuth.GET("/orders", controllers.GetOrder)
+
 	// without jwt for login and register
 	// route auth
 	e.POST("/register", controllers.RegisterCustomersController)
