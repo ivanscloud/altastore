@@ -20,6 +20,13 @@ func Start() *echo.Echo {
 	jwtAuth.GET("/products", controllers.GetProducts)
 	jwtAuth.PUT("/products/:id", controllers.UpdateProducts)
 	jwtAuth.DELETE("/products/:id", controllers.DeleteProduct)
+
+	//Route Categories
+	jwtAuth.GET("/categories", controllers.GetCategories)
+	jwtAuth.POST("/categories", controllers.CreateCategories)
+	jwtAuth.PUT("/categories/:id", controllers.UpdateCategories)
+	jwtAuth.DELETE("/categories/:id", controllers.DeleteCategories)
+
 	// update profile
 	jwtAuth.PUT("/customers/:id", controllers.UpdateProfileCustomersController)
 
